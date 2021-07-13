@@ -27,13 +27,13 @@ namespace eShopSolution.BackendApi.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var result = await _userService.Authencate(request);
+            var resultToken = await _userService.Authencate(request);
 
-            if (string.IsNullOrEmpty(result))
+            if (string.IsNullOrEmpty(resultToken))
             {
                 return BadRequest("User or Pass is incorrect");
             }
-            return Ok(new { token = result});
+            return Ok(resultToken);
         }
 
         [HttpPost("register")]
