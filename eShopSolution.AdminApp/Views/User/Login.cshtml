@@ -28,12 +28,14 @@
                                 <div class="card-body">
                                     <form asp-action="Login" asp-controller="User" method="post">
                                         <div class="form-group">
-                                            <input class="form-control py-4" asp-for="UserName" type="email" placeholder="Nhập tài khoản" />
                                             <label class="small mb-1">Account</label>
+                                            <input class="form-control py-4" asp-for="UserName" type="text" placeholder="Nhập tài khoản" />
+
                                         </div>
                                         <div class="form-group">
-                                            <input class="form-control py-4" asp-for="Password" type="password" placeholder="Password" />
                                             <label class="small mb-1">Password</label>
+                                            <input class="form-control py-4" asp-for="Password" type="password" placeholder="Password" />
+
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox"
